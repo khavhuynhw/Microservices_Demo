@@ -1,0 +1,5 @@
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Password123!" -p 1434:1433 --name sql-server -d mcr.microsoft.com/mssql/server:2022-latest
+
+docker pull mcr.microsoft.com/mssql-tools
+
+sqlcmd -S ip,port -U sa -P "Password123!" -i 
