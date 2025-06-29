@@ -41,9 +41,11 @@ eureka:
       default-zone: http://eureka-server:8761/eureka/
     fetch-registry: true
     register-with-eureka: true
+    registry-fetch-interval-seconds: 30
   instance:
     prefer-ip-address: true
     hostname: api-gateway
+    instance-id: ${spring.application.name}:${server.port}
 
 application:
   jwt:

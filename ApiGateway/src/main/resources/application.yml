@@ -41,9 +41,9 @@ eureka:
       default-zone: http://localhost:8761/eureka/
     fetch-registry: true
     register-with-eureka: true
-    registry-fetch-interval-seconds: 5
+    registry-fetch-interval-seconds: 30
   instance:
-    prefer-ip-address: false
+    prefer-ip-address: true
     hostname: localhost
     instance-id: ${spring.application.name}:${server.port}
 
@@ -65,5 +65,3 @@ management:
     web:
       exposure:
         include: health, info, gateway
-
-
